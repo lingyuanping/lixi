@@ -10,3 +10,9 @@
 * test commit to branch
 * test again commit to branch
 * test other dev branch commit
+* test merge by lingyuanping
+* merge false
+* merge first lingyuanping
+* merge second
+* three merge lingyuanping
+* merge three
