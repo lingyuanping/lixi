@@ -9,3 +9,4 @@
 * add branch
 * test commit to branch
 * test again commit to branch
+* test other dev branch commit
