@@ -13,3 +13,4 @@
 * test merge by lingyuanping
 * merge false
 * merge first lingyuanping
+* merge second
