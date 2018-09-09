@@ -14,3 +14,4 @@
 * merge false
 * merge first lingyuanping
 * merge second
+* merge three
