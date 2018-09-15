@@ -1,0 +1,23 @@
+{
+  "name": "lixi-theme-chalk",
+  "version": "0.0.1",
+  "description": "lixi componet chalk theme",
+  "main": "lib/index.css",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lingnniker/lixi_theme_chack.git"
+  },
+  "keywords": [
+    "theme",
+    "lixi"
+  ],
+  "author": "lingyuanping@outlook.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lingnniker/lixi_theme_chack/issues"
+  },
+  "homepage": "https://github.com/lingnniker/lixi_theme_chack#readme"
+}
