@@ -5,6 +5,7 @@
   "author": "lingniker <lingyuanping@outlook.com>",
   "private": true,
   "scripts": {
+    "build:file": "node build/bin/build-entry.js",
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
     "start": "npm run dev",
     "unit": "jest --config test/unit/jest.conf.js --coverage",
@@ -14,6 +15,8 @@
     "build": "node build/build.js"
   },
   "dependencies": {
+    "json-templater": "^1.2.0",
+    "uppercamelcase": "^3.0.0",
     "vue": "^2.5.2",
     "vue-router": "^3.0.1"
   },

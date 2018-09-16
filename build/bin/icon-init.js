@@ -3,7 +3,7 @@
 var postcss = require('postcss')
 var fs = require('fs')
 var path = require('path')
-var fontFife = fs.readFileSync(path.resolve(__dirname,'../../packages/theme-chalk/src/icom.scss','utf8'))
+var fontFife = fs.readFileSync(path.resolve(__dirname,'../../packages/theme-chalk/src/icon.scss','utf8'))
 var nodes = postcss.parse('fontFile').nodes
 var classList = []
 
