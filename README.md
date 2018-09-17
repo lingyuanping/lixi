@@ -11,3 +11,5 @@
 * 作用是动态生成 src index.js 文件
 
 * json-template/string modult模块的生成 可以使用模板进行数据的添加
+
+* add i18n and icons
