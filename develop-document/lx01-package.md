@@ -29,3 +29,7 @@ run build:file 主要是创建文件的 只要在 components.json 添加组件�
   1. 首先, 如何使用：直接使用就是了,最简单的方法就是 Vue.use(ElementUI,{locale}).这样就可以使用了。而且没有什么使用考虑的。
   2. 直接引用,然后使用的是locale.use(lang)。组件上的语言就改变了。变成lang加载的属性了。 Vue.component(Button.name,Button)。
   3. 在打包的时候，资源的替换。使用的是webpack.NormalModuleReplacementPlugin(/element-ui[\/\\]lib[\/\\]locale[\/\\]lang[\/\\]zh-CN/,'element-ui/lib/locale/lang/en')
+
+# 分割线在这里 上面的都是假的。都是不经脑子 就写的 现在要重新 去分析 package
+
+* 先总体归纳一下,有什么功能,安装npm包，打包文件,创建主题,创建单元模块(第一次了解),创建前端的umd(可以往后了解),清除打包后的包,部署,play,创建国际化,代码校验,发布代码,测试,测试监听

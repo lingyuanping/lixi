@@ -1,16 +1,25 @@
 {
-  "name": "lixi",
+  "name": "lixi-ui",
   "version": "1.0.0",
-  "description": "this is ui toolkit for web",
+  "description": "A Componet Library for Vue.js",
   "author": "lingniker <lingyuanping@outlook.com>",
+  "main": "lib/lixi-ui.common.js",
+  "files": [
+    "lib",
+    "src",
+    "packages",
+    "types"
+  ],
+  "typings": "types/index.d.ts",
   "private": true,
   "scripts": {
+    "install": "yarn || npm i",
     "build:version": "node build/bin/build-version.js",
     "build:i18n": "node build/bin/build-i18n.js",
     "build:icons": "node build/bin/icon-init.js",
     "build:file": "node build/bin/build-entry.js",
+    "dev": "npm run bootstrap && npm run build:file && cross-env NODE_ENV=development webpack-dev-server --config build/webpack.demo.js & node build/bin/template.js",
     "build:webpack":"cross-env NODE_ENV=development webpack-dev-server --config build/webpack.demo.js",
-    "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
     "start": "npm run dev",
     "unit": "jest --config test/unit/jest.conf.js --coverage",
     "e2e": "node test/e2e/runner.js",
@@ -18,6 +27,22 @@
     "lint": "eslint --ext .js,.vue src test/unit test/e2e/specs",
     "build": "node build/build.js"
   },
+  "faas": {
+    "domain": "lixi",
+    "public": "temp_web/lixi"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:lingniker/lixi.git"
+  },
+  "homepage": "http://lixi.lingyuanping.top",
+  "keywords": [
+    "lixi",
+    "vue",
+    "components"
+  ],
+  "unpkg": "lib/index.js",
+  "style": "lib/theme-chalk/index.css",
   "dependencies": {
     "json-templater": "^1.2.0",
     "uppercamelcase": "^3.0.0",

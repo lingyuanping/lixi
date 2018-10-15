@@ -20,3 +20,74 @@
   * sass 的语法 @mixin   
 
 # 哎这些文档根本就不能看，还是得要从头捋一遍。
+
+## 这写的是啥啊，哎，还得重头再来一遍
+
+* 首先要了解 scss 的用法 
+* 并且时刻提醒自己要使用bem的命名规则
+  * bem的命名规则(先这些)
+    * e: body div p span li ul box wrap nav header footer main tab bar aside title strong article container section buttom
+    input radio select  
+    * m:center left right top bottom big small little
+
+* scss 用法
+````css
+  body {
+    div {
+      width: 10px;
+    }
+  }
+  /* 转化为 */
+  body div {
+    width: 10px;
+  }
+```
+* minix include
+````scss 
+@minix wrap($val){
+  #{$val} : 10px
+}
+.div{
+  @include wrap(width)
+  height: 10px
+}
+/*css 输出*/
+
+.div{
+  width:10px;
+  height:10px;
+}
+```
+* extend 继承
+````css
+.class{
+  width: 10px
+}
+.class2{
+  extend .class
+  height: 10px;
+}
+/*css 输出*/
+.class{
+  width:10px;
+}
+.class2{
+  width:10px;
+  height:10px;
+}
+```
+
+* 自定义函数 functio
+````css
+@function double($n) {
+　　　　@return $n * 2;
+   }
+
+　　#sidebar {
+　　　　width: double(5px);
+　　}
+/*css 输出*/
+    #sidebar {
+      width: 10px;
+    }
+```
