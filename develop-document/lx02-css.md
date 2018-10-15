@@ -1,0 +1,93 @@
+# 这篇 markdown 是专门来写 sass 的 (lass 我就不研究了)
+
+1. 首先呢, sass 是什么。为什么要使用 sass。 我们不需要学习sass，直接上带代码 css 就行了。非要搞得这么难。
+其实不然。有了sass 会让你的项目有一种工程的感觉。因为你所写的东西都感觉很有规律。写多了了就觉得有规律了。
+如果你还是像以前一样。写一步走一步，那么你就应该学习。并不是所有的人一开始就能学会的。基础越高（其实就是敲代码时间越长）的人，
+学习 sass 的就越快。还是需要基础。废话就不多说了。
+
+2. 第二，如何在我们的项目中应用 sass。其实最简单的就是 使用 vue-cli (vue的一个脚手架) 只要使用就能帮你构建好。
+我还是讲一下吧。不要花太多时间去了解。我们现在的任务是学习sass。不想你跑偏。稍稍了解就够了。听我的，现不要馅的太深，
+要不你会混乱的。得不偿失。我还会再说几个如何使用 sass 的方法。但是这不是重点。
+
+3. 现在开始了。
+  * 现在我定义一个全局变量用来 控制 全局的主题颜色。 我现在就把所有的代码写在同一个文件下. 这样便于理解。
+  * 定义一个文件 index.scss 。这是一个入口文件。也是总文件。现在我就不拆分这个文件了。（将文件拆分也是有规律的）
+  * 等学完这个 你们可以去了解一下。我的并不是最好的，但是我的肯定是容易理解的(重点也不是在这里)
+  * 在主文件 index.scss 下。 定义一个全局的变量。我们要有主题颜色，要有告警色 , 线的颜色， 背景的颜色，阴影色，字体默认属性。z-index的定义。
+  复选框的定义。icon的定义。告警框的定义。单选框的定义。选择select框的定义。确定框的定义。消息弹框的定义。消息的定义。通知信息的定义。输入框的定义。菜单的样式。选项组的样式。标签的样式。按钮的样式。菜单的样式默认的高度。开关的样式。表格的样式。分页的样式。弹框的样式。工具提示样式。
+  树的样式。下拉菜单的样式。标记的样式。卡片的样式。滑动的样式。步骤样式。菜单样式。速度样式。时间插件样式。加载的样式。滑轮样式。轮播图样式。折叠样式。还有就是头，尾，主。还有就是 超小屏， 小屏，中屏，大屏，超大屏的定义。
+  * minxins.scss 是计算的文件。将需要的东西传进去，然后就计算。
+  * sass 的语法 @mixin   
+
+# 哎这些文档根本就不能看，还是得要从头捋一遍。
+
+## 这写的是啥啊，哎，还得重头再来一遍
+
+* 首先要了解 scss 的用法 
+* 并且时刻提醒自己要使用bem的命名规则
+  * bem的命名规则(先这些)
+    * e: body div p span li ul box wrap nav header footer main tab bar aside title strong article container section buttom
+    input radio select  
+    * m:center left right top bottom big small little
+
+* scss 用法
+````css
+  body {
+    div {
+      width: 10px;
+    }
+  }
+  /* 转化为 */
+  body div {
+    width: 10px;
+  }
+```
+* minix include
+````scss 
+@minix wrap($val){
+  #{$val} : 10px
+}
+.div{
+  @include wrap(width)
+  height: 10px
+}
+/*css 输出*/
+
+.div{
+  width:10px;
+  height:10px;
+}
+```
+* extend 继承
+````css
+.class{
+  width: 10px
+}
+.class2{
+  extend .class
+  height: 10px;
+}
+/*css 输出*/
+.class{
+  width:10px;
+}
+.class2{
+  width:10px;
+  height:10px;
+}
+```
+
+* 自定义函数 functio
+````css
+@function double($n) {
+　　　　@return $n * 2;
+   }
+
+　　#sidebar {
+　　　　width: double(5px);
+　　}
+/*css 输出*/
+    #sidebar {
+      width: 10px;
+    }
+```
